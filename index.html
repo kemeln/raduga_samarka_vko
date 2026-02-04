@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Радуга — База отдыха на Самарке</title>
+  <meta name="description" content="Семейный отдых на берегу озера Сарыбель в Самарке, ВКО. Уютные дома, ферма, пляж, баня, караоке и многое другое.">
+  <meta name="keywords" content="база отдыха, Самарка, ВКО, озеро Сарыбель, семейный отдых, Радуга">
+  <meta property="og:title" content="Радуга — База отдыха на Самарке">
+  <meta property="og:description" content="Семейный отдых на берегу озера Сарыбель. Уютные дома, ферма, пляж, баня и многое другое.">
+  <meta property="og:image" content="images/hero/hero1.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#hero" class="header-logo">
+        <img src="images/logo.jpg" alt="Радуга">
+        <span>RADUGA</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#about" data-i18n="nav.about">О нас</a>
+        <a href="#rooms" data-i18n="nav.rooms">Дома</a>
+        <a href="#pricing" data-i18n="nav.pricing">Цены</a>
+        <a href="#facilities" data-i18n="nav.facilities">Удобства</a>
+        <a href="#tours" data-i18n="nav.tours">Экскурсии</a>
+        <a href="#charity" data-i18n="nav.charity">Благотворительность</a>
+        <a href="#contact" data-i18n="nav.contact">Контакты</a>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="kz">KZ</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="hero-carousel" id="heroCarousel">
+      <div class="hero-slide active"><img src="images/hero/hero1.jpg" alt="Радуга"></div>
+      <div class="hero-slide"><img src="images/hero/hero2.jpg" alt="Озеро"></div>
+      <div class="hero-slide"><img src="images/hero/hero3.jpg" alt="Природа"></div>
+      <div class="hero-slide"><img src="images/hero/hero4.jpg" alt="Территория"></div>
+      <div class="hero-slide"><img src="images/hero/hero5.jpg" alt="Отдых"></div>
+      <div class="hero-slide"><img src="images/hero/hero6.jpg" alt="Дома"></div>
+      <div class="hero-slide"><img src="images/hero/hero7.jpg" alt="Пляж"></div>
+      <div class="hero-slide"><img src="images/hero/hero8.jpg" alt="Вечер"></div>
+      <div class="hero-slide"><img src="images/hero/hero9.jpg" alt="Закат"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="images/logo.jpg" alt="Радуга" class="hero-logo">
+      <h1 class="hero-title" data-i18n="hero.title">Радуга</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">База отдыха на Самарке</p>
+      <p class="hero-tagline" data-i18n="hero.tagline">Семейный отдых на берегу озера Сарыбель, Самарка, ВКО</p>
+      <div class="hero-buttons">
+        <a href="#questionnaire" class="btn btn-primary btn-lg" data-i18n="hero.cta">Забронировать</a>
+        <a href="#about" class="btn btn-secondary btn-lg" data-i18n="hero.explore">Узнать больше</a>
+      </div>
+    </div>
+    <div class="hero-indicators" id="heroIndicators"></div>
+    <div class="scroll-indicator">
+      <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section-title" data-i18n="about.title">Почему Радуга?</h2>
+      <div class="rainbow-divider"></div>
+      <p class="section-subtitle" style="margin-top: 24px;" data-i18n="about.subtitle"></p>
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#127795;</div>
+          <h3 data-i18n="about.feature1.title">Природа</h3>
+          <p data-i18n="about.feature1.desc">Озеро Сарыбель, сады, горы — отдых на природе в окружении красоты</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#128106;</div>
+          <h3 data-i18n="about.feature2.title">Для всей семьи</h3>
+          <p data-i18n="about.feature2.desc">Ферма, детская площадка, настольные игры, велосипеды — развлечения для всех возрастов</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#127968;</div>
+          <h3 data-i18n="about.feature3.title">Комфорт</h3>
+          <p data-i18n="about.feature3.desc">Уютные дома с полным оснащением, баня и караоке включены</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#128737;</div>
+          <h3 data-i18n="about.feature4.title">Безопасность</h3>
+          <p data-i18n="about.feature4.desc">Охрана 24/7, сертифицированная вода и пляж, противопожарное оснащение</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ROOMS ==================== -->
+  <section class="section" id="rooms">
+    <div class="container">
+      <h2 class="section-title" data-i18n="rooms.title">Наши дома</h2>
+      <div class="rainbow-divider"></div>
+      <p class="section-subtitle" style="margin-top: 24px;" data-i18n="rooms.subtitle">Три категории домов для любого бюджета</p>
+
+      <div class="rooms-grid">
+        <!-- Comfort -->
+        <div class="room-card fade-in">
+          <div class="room-card-image">
+            <img src="images/comfort/exterior1.jpg" alt="Комфорт">
+            <div class="room-card-badge">54 <span data-i18n="rooms.area">м²</span></div>
+          </div>
+          <div class="room-card-body">
+            <h3 class="room-card-name" data-i18n="rooms.comfort.name">Комфорт</h3>
+            <p class="room-card-tagline" data-i18n="rooms.comfort.tagline">Идеально для отдыха с семьёй или друзьями</p>
+            <div class="room-card-specs">
+              <div class="room-spec">
+                <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <span>6 <span data-i18n="rooms.guests">гостей</span></span>
+              </div>
+              <div class="room-spec">
+                <svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V7H1v10h2v-3h18v3h2V11c0-2.21-1.79-4-4-4z"/></svg>
+                <span>2 <span data-i18n="rooms.bedrooms">спальни</span></span>
+              </div>
+              <div class="room-spec">
+                <svg viewBox="0 0 24 24"><path d="M7 7V1H5v2H3v2h2v2H3v2h2v2H3v2h2v2h2v-2h2v-2H7v-2h2V9H7V7zm12 10h-2V7a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v10h-2v4h10v-4z"/></svg>
+                <span>1 <span data-i18n="rooms.bathrooms">санузел</span></span>
+              </div>
+            </div>
+            <p class="room-card-price"><span data-i18n="rooms.from">от</span> 33 000 &#8376; <span data-i18n="rooms.per_night">/ сутки</span></p>
+            <div class="room-card-actions">
+              <button class="btn btn-outline btn-sm" onclick="openRoomModal('comfort')" data-i18n="rooms.details">Подробнее</button>
+              <a href="#questionnaire" class="btn btn-primary btn-sm" data-i18n="rooms.book">Забронировать</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comfort+ -->
+        <div class="room-card fade-in">
+          <div class="room-card-image">
+            <img src="images/comfort-plus/exterior1.jpg" alt="Комфорт Плюс">
+            <div class="room-card-badge">54 <span data-i18n="rooms.area">м²</span></div>
+          </div>
+          <div class="room-card-body">
+            <h3 class="room-card-name" data-i18n="rooms.comfortplus.name">Комфорт Плюс</h3>
+            <p class="room-card-tagline" data-i18n="rooms.comfortplus.tagline">Ещё больше уюта и стильный интерьер</p>
+            <div class="room-card-specs">
+              <div class="room-spec">
+                <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <span>6 <span data-i18n="rooms.guests">гостей</span></span>
+              </div>
+              <div class="room-spec">
+                <svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V7H1v10h2v-3h18v3h2V11c0-2.21-1.79-4-4-4z"/></svg>
+                <span>2 <span data-i18n="rooms.bedrooms">спальни</span></span>
+              </div>
+              <div class="room-spec">
+                <svg viewBox="0 0 24 24"><path d="M7 7V1H5v2H3v2h2v2H3v2h2v2H3v2h2v2h2v-2h2v-2H7v-2h2V9H7V7zm12 10h-2V7a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v10h-2v4h10v-4z"/></svg>
+                <span>1 <span data-i18n="rooms.bathrooms">санузел</span></span>
+              </div>
+            </div>
+            <p class="room-card-price"><span data-i18n="rooms.from">от</span> 36 000 &#8376; <span data-i18n="rooms.per_night">/ сутки</span></p>
+            <div class="room-card-actions">
+              <button class="btn btn-outline btn-sm" onclick="openRoomModal('comfortplus')" data-i18n="rooms.details">Подробнее</button>
+              <a href="#questionnaire" class="btn btn-primary btn-sm" data-i18n="rooms.book">Забронировать</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIP -->
+        <div class="room-card fade-in">
+          <div class="room-card-image">
+            <img src="images/hero/hero1.jpg" alt="VIP">
+            <div class="room-card-badge">84 <span data-i18n="rooms.area">м²</span></div>
+          </div>
+          <div class="room-card-body">
+            <h3 class="room-card-name" data-i18n="rooms.vip.name">VIP</h3>
+            <p class="room-card-tagline" data-i18n="rooms.vip.tagline">Максимум пространства и премиум-комфорт</p>
+            <div class="room-card-specs">
+              <div class="room-spec">
+                <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <span>8 <span data-i18n="rooms.guests">гостей</span></span>
+              </div>
+              <div class="room-spec">
+                <svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V7H1v10h2v-3h18v3h2V11c0-2.21-1.79-4-4-4z"/></svg>
+                <span>3 <span data-i18n="rooms.bedrooms">спальни</span></span>
+              </div>
+              <div class="room-spec">
+                <svg viewBox="0 0 24 24"><path d="M7 7V1H5v2H3v2h2v2H3v2h2v2H3v2h2v2h2v-2h2v-2H7v-2h2V9H7V7zm12 10h-2V7a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v10h-2v4h10v-4z"/></svg>
+                <span>2 <span data-i18n="rooms.bathrooms">санузла</span></span>
+              </div>
+            </div>
+            <p class="room-card-price"><span data-i18n="rooms.from">от</span> 55 000 &#8376; <span data-i18n="rooms.per_night">/ сутки</span></p>
+            <div class="room-card-actions">
+              <button class="btn btn-outline btn-sm" onclick="openRoomModal('vip')" data-i18n="rooms.details">Подробнее</button>
+              <a href="#questionnaire" class="btn btn-primary btn-sm" data-i18n="rooms.book">Забронировать</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ROOM DETAIL MODALS ==================== -->
+  <!-- Comfort Modal -->
+  <div class="modal-overlay" id="modal-comfort">
+    <div class="modal">
+      <div class="modal-header">
+        <img src="images/comfort/exterior1.jpg" alt="Комфорт" id="comfort-main-img">
+        <button class="modal-close" onclick="closeModal('comfort')">&times;</button>
+      </div>
+      <div class="modal-gallery">
+        <img src="images/comfort/exterior1.jpg" alt="" class="active" onclick="changeModalImg('comfort', this)">
+        <img src="images/comfort/bedroom1.jpg" alt="" onclick="changeModalImg('comfort', this)">
+        <img src="images/comfort/bedroom2.jpg" alt="" onclick="changeModalImg('comfort', this)">
+        <img src="images/comfort/kitchen.jpg" alt="" onclick="changeModalImg('comfort', this)">
+        <img src="images/comfort/bathroom.jpg" alt="" onclick="changeModalImg('comfort', this)">
+      </div>
+      <div class="modal-body">
+        <h2 data-i18n="rooms.comfort.name">Комфорт</h2>
+        <p class="modal-tagline" data-i18n="rooms.comfort.tagline">Идеально для отдыха с семьёй или друзьями</p>
+        <div class="modal-specs-grid">
+          <div class="modal-spec">
+            <div class="spec-value">54</div>
+            <div class="spec-label" data-i18n="rooms.area">м²</div>
+          </div>
+          <div class="modal-spec">
+            <div class="spec-value">6</div>
+            <div class="spec-label" data-i18n="rooms.guests">гостей</div>
+          </div>
+          <div class="modal-spec">
+            <div class="spec-value">2</div>
+            <div class="spec-label" data-i18n="rooms.bedrooms">спальни</div>
+          </div>
+          <div class="modal-spec">
+            <div class="spec-value">1</div>
+            <div class="spec-label" data-i18n="rooms.bathrooms">санузел</div>
+          </div>
+        </div>
+        <div class="modal-section">
+          <h4 data-i18n="modal.sleeping">Спальные места</h4>
+          <ul>
+            <li data-i18n="rooms.comfort.bed1">Спальня 1 — двуспальная кровать</li>
+            <li data-i18n="rooms.comfort.bed2">Спальня 2 — 3 односпальные кровати</li>
+            <li data-i18n="rooms.comfort.bed3">Зал — раскладной диван (на 2 человека)</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <h4 data-i18n="modal.equipment">Оснащение</h4>
+          <ul>
+            <li data-i18n="modal.ac">Кондиционер</li>
+            <li data-i18n="modal.tv">Телевизор</li>
+            <li data-i18n="modal.fridge">Холодильник</li>
+            <li data-i18n="modal.stove">Электроплита</li>
+            <li data-i18n="modal.microwave">СВЧ-печь</li>
+            <li data-i18n="modal.dishes">Полный набор посуды</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <h4 data-i18n="modal.additional">Дополнительно</h4>
+          <ul>
+            <li data-i18n="modal.terrace">Терраса</li>
+            <li data-i18n="modal.mangal">Мангал</li>
+            <li data-i18n="modal.bedding">Постельное бельё</li>
+          </ul>
+        </div>
+        <div class="modal-actions">
+          <a href="#questionnaire" class="btn btn-primary" onclick="closeModal('comfort')" data-i18n="rooms.book">Забронировать</a>
+          <button class="btn btn-outline" onclick="closeModal('comfort')" data-i18n="modal.close">Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comfort+ Modal -->
+  <div class="modal-overlay" id="modal-comfortplus">
+    <div class="modal">
+      <div class="modal-header">
+        <img src="images/comfort-plus/exterior1.jpg" alt="Комфорт Плюс" id="comfortplus-main-img">
+        <button class="modal-close" onclick="closeModal('comfortplus')">&times;</button>
+      </div>
+      <div class="modal-gallery">
+        <img src="images/comfort-plus/exterior1.jpg" alt="" class="active" onclick="changeModalImg('comfortplus', this)">
+        <img src="images/comfort-plus/exterior2.jpg" alt="" onclick="changeModalImg('comfortplus', this)">
+        <img src="images/comfort-plus/bedroom1.jpg" alt="" onclick="changeModalImg('comfortplus', this)">
+        <img src="images/comfort-plus/bedroom2.jpg" alt="" onclick="changeModalImg('comfortplus', this)">
+        <img src="images/comfort-plus/bathroom.jpg" alt="" onclick="changeModalImg('comfortplus', this)">
+      </div>
+      <div class="modal-body">
+        <h2 data-i18n="rooms.comfortplus.name">Комфорт Плюс</h2>
+        <p class="modal-tagline" data-i18n="rooms.comfortplus.tagline">Ещё больше уюта и стильный интерьер</p>
+        <div class="modal-specs-grid">
+          <div class="modal-spec">
+            <div class="spec-value">54</div>
+            <div class="spec-label" data-i18n="rooms.area">м²</div>
+          </div>
+          <div class="modal-spec">
+            <div class="spec-value">6</div>
+            <div class="spec-label" data-i18n="rooms.guests">гостей</div>
+          </div>
+          <div class="modal-spec">
+            <div class="spec-value">2</div>
+            <div class="spec-label" data-i18n="rooms.bedrooms">спальни</div>
+          </div>
+          <div class="modal-spec">
+            <div class="spec-value">1</div>
+            <div class="spec-label" data-i18n="rooms.bathrooms">санузел</div>
+          </div>
+        </div>
+        <div class="modal-diff">
+          <h4 data-i18n="modal.differences">Отличия Комфорт+</h4>
+          <ul>
+            <li data-i18n="rooms.comfortplus.diff1">Новое строительство</li>
+            <li data-i18n="rooms.comfortplus.diff2">Современный ремонт</li>
+            <li data-i18n="rooms.comfortplus.diff3">Стильный интерьер</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <h4 data-i18n="modal.sleeping">Спальные места</h4>
+          <ul>
+            <li data-i18n="rooms.comfortplus.bed1">Спальня 1 — двуспальная кровать</li>
+            <li data-i18n="rooms.comfortplus.bed2">Спальня 2 — 3 односпальные кровати</li>
+            <li data-i18n="rooms.comfortplus.bed3">Зал — раскладной диван (на 2 человека)</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <h4 data-i18n="modal.equipment">Оснащение</h4>
+          <ul>
+            <li data-i18n="modal.ac">Кондиционер</li>
+            <li data-i18n="modal.tv">Телевизор</li>
+            <li data-i18n="modal.fridge">Холодильник</li>
+            <li data-i18n="modal.stove">Электроплита</li>
+            <li data-i18n="modal.microwave">СВЧ-печь</li>
+            <li data-i18n="modal.dishes">Полный набор посуды</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <h4 data-i18n="modal.additional">Дополнительно</h4>
+          <ul>
+            <li data-i18n="modal.terrace">Терраса</li>
+            <li data-i18n="modal.mangal">Мангал</li>
+            <li data-i18n="modal.bedding">Постельное бельё</li>
+          </ul>
+        </div>
+        <div class="modal-actions">
+          <a href="#questionnaire" class="btn btn-primary" onclick="closeModal('comfortplus')" data-i18n="rooms.book">Забронировать</a>
+          <button class="btn btn-outline" onclick="closeModal('comfortplus')" data-i18n="modal.close">Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIP Modal -->
+  <div class="modal-overlay" id="modal-vip">
+    <div class="modal">
+      <div class="modal-header">
+        <img src="images/vip/master_bedroom.jpg" alt="VIP" id="vip-main-img">
+        <button class="modal-close" onclick="closeModal('vip')">&times;</button>
+      </div>
+      <div class="modal-gallery">
+        <img src="images/vip/master_bedroom.jpg" alt="" class="active" onclick="changeModalImg('vip', this)">
+        <img src="images/vip/master_bedroom2.jpg" alt="" onclick="changeModalImg('vip', this)">
+        <img src="images/vip/bedroom1.jpg" alt="" onclick="changeModalImg('vip', this)">
+        <img src="images/vip/bedroom2.jpg" alt="" onclick="changeModalImg('vip', this)">
+        <img src="images/vip/kitchen.jpg" alt="" onclick="changeModalImg('vip', this)">
+        <img src="images/vip/bathroom_1.jpg" alt="" onclick="changeModalImg('vip', this)">
+        <img src="images/vip/bathroom2.jpg" alt="" onclick="changeModalImg('vip', this)">
+        <img src="images/vip/bathroom3.jpg" alt="" onclick="changeModalImg('vip', this)">
+      </div>
+      <div class="modal-body">
+        <h2 data-i18n="rooms.vip.name">VIP</h2>
+        <p class="modal-tagline" data-i18n="rooms.vip.tagline">Максимум пространства и премиум-комфорт</p>
+        <div class="modal-specs-grid">
+          <div class="modal-spec">
+            <div class="spec-value">84</div>
+            <div class="spec-label" data-i18n="rooms.area">м²</div>
+          </div>
+          <div class="modal-spec">
+            <div class="spec-value">8</div>
+            <div class="spec-label" data-i18n="rooms.guests">гостей</div>
+          </div>
+          <div class="modal-spec">
+            <div class="spec-value">3</div>
+            <div class="spec-label" data-i18n="rooms.bedrooms">спальни</div>
+          </div>
+          <div class="modal-spec">
+            <div class="spec-value">2</div>
+            <div class="spec-label" data-i18n="rooms.bathrooms">санузла</div>
+          </div>
+        </div>
+        <div class="modal-section">
+          <h4 data-i18n="modal.sleeping">Спальные места</h4>
+          <ul>
+            <li data-i18n="rooms.vip.bed1">Мастер-спальня — двуспальная кровать, панорамные окна, собственный санузел</li>
+            <li data-i18n="rooms.vip.bed2">2 спальни — по 2 односпальные кровати</li>
+            <li data-i18n="rooms.vip.bed3">Зал — раскладной диван (на 2 человека)</li>
+          </ul>
+        </div>
+        <div class="modal-section">
+          <h4 data-i18n="modal.equipment">Оснащение</h4>
+          <ul>
+            <li data-i18n="modal.ac2">2 кондиционера</li>
+            <li data-i18n="modal.tv2">2 телевизора</li>
+            <li data-i18n="modal.fridge">Холодильник</li>
+            <li data-i18n="modal.stove">Электроплита</li>
+            <li data-i18n="modal.microwave">СВЧ-печь</li>
+            <li data-i18n="modal.dishes">Полный набор посуды</li>
+          </ul>
+        </div>
+        <div class="modal-diff">
+          <h4 data-i18n="modal.vipfeatures">Особенности VIP</h4>
+          <ul>
+            <li data-i18n="rooms.vip.feat1">Белоснежное постельное бельё</li>
+            <li data-i18n="rooms.vip.feat2">Халаты, полотенца и тапочки</li>
+            <li data-i18n="rooms.vip.feat3">Просторная терраса</li>
+            <li data-i18n="rooms.vip.feat4">Мангал</li>
+          </ul>
+        </div>
+        <div class="modal-actions">
+          <a href="#questionnaire" class="btn btn-primary" onclick="closeModal('vip')" data-i18n="rooms.book">Забронировать</a>
+          <button class="btn btn-outline" onclick="closeModal('vip')" data-i18n="modal.close">Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PRICING ==================== -->
+  <section class="section pricing" id="pricing">
+    <div class="container">
+      <h2 class="section-title" data-i18n="pricing.title">Цены на лето 2026</h2>
+      <div class="rainbow-divider"></div>
+      <p class="section-subtitle" style="margin-top: 24px;" data-i18n="pricing.subtitle">Стоимость проживания за сутки в тенге</p>
+
+      <!-- Special Offer -->
+      <div class="special-offer fade-in">
+        <h3 data-i18n="pricing.special.title">Специальное предложение</h3>
+        <p class="offer-dates" data-i18n="pricing.special.dates">На даты заезда: 23.05 — 11.06 и 24.08 — 06.09</p>
+        <div class="offer-bonuses">
+          <div class="offer-bonus" data-i18n="pricing.special.bonus1">3 суток — 1 сутки в подарок</div>
+          <div class="offer-bonus" data-i18n="pricing.special.bonus2">4 суток — 2 суток в подарок</div>
+        </div>
+        <p class="offer-hurry" data-i18n="pricing.special.hurry">Лучшие даты разбирают заранее!</p>
+      </div>
+
+      <!-- Pricing Table -->
+      <div class="pricing-table-wrapper fade-in">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th data-i18n="pricing.house_type">Тип дома</th>
+              <th data-i18n="pricing.booking">Бронирование</th>
+              <th data-i18n="pricing.june">Июнь</th>
+              <th data-i18n="pricing.july">Июль</th>
+              <th data-i18n="pricing.august">Август</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="early-bid">
+              <td class="room-type-cell" rowspan="2" data-i18n="rooms.comfort.name">Комфорт</td>
+              <td data-i18n="pricing.early">Раннее</td>
+              <td class="price-cell">33 000 &#8376;</td>
+              <td class="price-cell">35 000 &#8376;</td>
+              <td class="price-cell">33 000 &#8376;</td>
+            </tr>
+            <tr>
+              <td data-i18n="pricing.normal">Обычное</td>
+              <td class="price-cell">35 000 &#8376;</td>
+              <td class="price-cell">40 000 &#8376;</td>
+              <td class="price-cell">35 000 &#8376;</td>
+            </tr>
+            <tr class="early-bid">
+              <td class="room-type-cell" rowspan="2" data-i18n="rooms.comfortplus.name">Комфорт Плюс</td>
+              <td data-i18n="pricing.early">Раннее</td>
+              <td class="price-cell">36 000 &#8376;</td>
+              <td class="price-cell">40 000 &#8376;</td>
+              <td class="price-cell">36 000 &#8376;</td>
+            </tr>
+            <tr>
+              <td data-i18n="pricing.normal">Обычное</td>
+              <td class="price-cell">40 000 &#8376;</td>
+              <td class="price-cell">45 000 &#8376;</td>
+              <td class="price-cell">40 000 &#8376;</td>
+            </tr>
+            <tr class="early-bid">
+              <td class="room-type-cell" rowspan="2">VIP</td>
+              <td data-i18n="pricing.early">Раннее</td>
+              <td class="price-cell">55 000 &#8376;</td>
+              <td class="price-cell">60 000 &#8376;</td>
+              <td class="price-cell">55 000 &#8376;</td>
+            </tr>
+            <tr>
+              <td data-i18n="pricing.normal">Обычное</td>
+              <td class="price-cell">60 000 &#8376;</td>
+              <td class="price-cell">70 000 &#8376;</td>
+              <td class="price-cell">60 000 &#8376;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pricing Notes -->
+      <div class="pricing-notes">
+        <div class="pricing-note">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+          <span data-i18n="pricing.note1">Минимальный заезд в июне и августе — 3 суток</span>
+        </div>
+        <div class="pricing-note">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+          <span data-i18n="pricing.note2">В июле — 4 суток</span>
+        </div>
+        <div class="pricing-note">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+          <span data-i18n="pricing.note3">Заселение в дома на первой линии — от 5 суток</span>
+        </div>
+      </div>
+
+      <!-- Included / Excluded -->
+      <div class="included-excluded">
+        <div class="included-card fade-in">
+          <h3>&#9989; <span data-i18n="included.title">Что включено в стоимость</span></h3>
+          <ul class="included-list">
+            <li data-i18n="included.item1">Баня / сауна</li>
+            <li data-i18n="included.item2">Караоке</li>
+            <li data-i18n="included.item3">Мангал и зона барбекю</li>
+            <li data-i18n="included.item4">Постельное бельё</li>
+            <li data-i18n="included.item5">Полный набор посуды и кухонного оборудования</li>
+            <li data-i18n="included.item6">Детская площадка</li>
+            <li data-i18n="included.item7">Настольные игры</li>
+            <li data-i18n="included.item8">Доступ к ферме</li>
+            <li data-i18n="included.item9">Пляж озера Сарыбель</li>
+            <li data-i18n="included.item10">Сад (сбор ягод в сезон)</li>
+            <li data-i18n="included.item11">Библиотека</li>
+            <li data-i18n="included.item12">Охрана 24/7</li>
+          </ul>
+        </div>
+        <div class="excluded-card fade-in">
+          <h3>&#10060; <span data-i18n="excluded.title">Не включено / дополнительно</span></h3>
+          <ul class="excluded-list">
+            <li data-i18n="excluded.item1">SUP-борды — 10 000 &#8376;/час</li>
+            <li data-i18n="excluded.item2">Велосипеды — аренда по записи</li>
+            <li data-i18n="excluded.item3">Дрова — покупка на месте</li>
+            <li data-i18n="excluded.item4">Аренда казана — у администрации</li>
+            <li data-i18n="excluded.item5">Питание — самостоятельное (кухня оборудована)</li>
+            <li data-i18n="excluded.item6">Ранний заезд / поздний выезд — 50% от стоимости суток</li>
+            <li data-i18n="excluded.item7">Доп. гость — 5 000 &#8376;/чел. (макс. 1 чел.)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FACILITIES ==================== -->
+  <section class="section" id="facilities">
+    <div class="container">
+      <h2 class="section-title" data-i18n="facilities.title">Удобства и развлечения</h2>
+      <div class="rainbow-divider"></div>
+      <p class="section-subtitle" style="margin-top: 24px;" data-i18n="facilities.subtitle">Всё для незабываемого отдыха</p>
+
+      <div class="facilities-grid">
+        <div class="facility-card fade-in">
+          <div class="facility-card-image">
+            <img src="images/facilities/beach.jpg" alt="Пляж" loading="lazy">
+          </div>
+          <div class="facility-card-body">
+            <h3 data-i18n="facilities.beach.title">Пляж озера Сарыбель</h3>
+            <p data-i18n="facilities.beach.desc">Собственный пляж с чистой водой, сертифицированной СЭС</p>
+          </div>
+        </div>
+
+        <div class="facility-card fade-in">
+          <div class="facility-card-image">
+            <img src="images/facilities/farm2.jpg" alt="Ферма" loading="lazy">
+          </div>
+          <div class="facility-card-body">
+            <h3 data-i18n="facilities.farm.title">Ферма</h3>
+            <p data-i18n="facilities.farm.desc">Козы, коровы, пони, курицы и ослики — радость для детей и взрослых</p>
+          </div>
+        </div>
+
+        <div class="facility-card fade-in">
+          <div class="facility-card-image">
+            <img src="images/facilities/playground1.jpg" alt="Площадка" loading="lazy">
+          </div>
+          <div class="facility-card-body">
+            <h3 data-i18n="facilities.playground.title">Детская площадка</h3>
+            <p data-i18n="facilities.playground.desc">Баскетбол, волейбол, качели, теннисный стол, бадминтон, футбол</p>
+          </div>
+        </div>
+
+        <div class="facility-card fade-in">
+          <div class="facility-card-image">
+            <img src="images/facilities/garden1.jpg" alt="Сад" loading="lazy">
+          </div>
+          <div class="facility-card-body">
+            <h3 data-i18n="facilities.garden.title">Сад (1 гектар)</h3>
+            <p data-i18n="facilities.garden.desc">Арбузы, дыни — сбор ягод в сезон для личного потребления</p>
+          </div>
+        </div>
+
+        <div class="facility-card fade-in">
+          <div class="facility-card-image">
+            <img src="images/facilities/sub_board.jpg" alt="SUP" loading="lazy">
+          </div>
+          <div class="facility-card-body">
+            <h3 data-i18n="facilities.sup.title">SUP-борды</h3>
+            <p data-i18n="facilities.sup.desc">Аренда за 10 000 &#8376;/час — катание в жилетах и в безветренное время</p>
+          </div>
+        </div>
+
+        <div class="facility-card facility-card-noimg fade-in">
+          <div class="facility-emoji">&#127926;</div>
+          <div class="facility-card-body">
+            <h3 data-i18n="facilities.karaoke.title">Караоке</h3>
+            <p data-i18n="facilities.karaoke.desc">Включено в стоимость — веселье для всей семьи</p>
+          </div>
+        </div>
+
+        <div class="facility-card facility-card-noimg fade-in">
+          <div class="facility-emoji">&#9832;</div>
+          <div class="facility-card-body">
+            <h3 data-i18n="facilities.sauna.title">Баня</h3>
+            <p data-i18n="facilities.sauna.desc">Включена в стоимость проживания</p>
+          </div>
+        </div>
+
+        <div class="facility-card facility-card-noimg fade-in">
+          <div class="facility-emoji">&#127922;</div>
+          <div class="facility-card-body">
+            <h3 data-i18n="facilities.games.title">Настольные игры</h3>
+            <p data-i18n="facilities.games.desc">Мафия, Монополия, Alias, Домино, Имаджинариум, Sequence, Твистер</p>
+          </div>
+        </div>
+
+        <div class="facility-card facility-card-noimg fade-in">
+          <div class="facility-emoji">&#128218;</div>
+          <div class="facility-card-body">
+            <h3 data-i18n="facilities.library.title">Библиотека</h3>
+            <p data-i18n="facilities.library.desc">Для любителей чтения на отдыхе</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo strip -->
+      <div class="gallery-strip" style="margin-top: 32px;">
+        <img src="images/facilities/playground2.jpg" alt="Площадка" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/facilities/playground3.jpg" alt="Площадка" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/facilities/playground4.jpg" alt="Площадка" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/facilities/farm3.jpg" alt="Ферма" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/facilities/garden2.jpg" alt="Сад" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/facilities/safety1.jpg" alt="Безопасность" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/facilities/safety2.jpg" alt="Безопасность" loading="lazy" onclick="openLightbox(this.src)">
+      </div>
+
+      <!-- Safety Banner -->
+      <div class="safety-banner fade-in">
+        <div class="safety-icon">&#128737;</div>
+        <div class="safety-content">
+          <h3 data-i18n="safety.title">Безопасность и сертификация</h3>
+          <p data-i18n="safety.desc">Все проверки СЭС пройдены — показатели в норме</p>
+          <div class="safety-list">
+            <div class="safety-item"><span>&#9989;</span> <span data-i18n="safety.security">Охрана 24/7</span></div>
+            <div class="safety-item"><span>&#9989;</span> <span data-i18n="safety.fire">Противопожарное оснащение</span></div>
+            <div class="safety-item"><span>&#9989;</span> <span data-i18n="safety.water">Сертифицированная питьевая вода</span></div>
+            <div class="safety-item"><span>&#9989;</span> <span data-i18n="safety.beach_cert">Проверенный пляж и вода</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TOURS ==================== -->
+  <section class="section tours" id="tours">
+    <div class="container">
+      <h2 class="section-title" data-i18n="tours.title">Экскурсии и достопримечательности</h2>
+      <div class="rainbow-divider"></div>
+      <p class="section-subtitle" style="margin-top: 24px;" data-i18n="tours.subtitle">Откройте красоту Восточного Казахстана</p>
+
+      <div class="tours-grid">
+        <div class="tour-card fade-in">
+          <div class="tour-card-image">
+            <div class="tour-placeholder">&#127956;</div>
+          </div>
+          <div class="tour-card-body">
+            <h3 data-i18n="tours.kiin.title">Киин Кериш</h3>
+            <p data-i18n="tours.kiin.desc">Уникальный глиняный каньон — «Город духов». Марсианские пейзажи из красных, оранжевых и белых глин</p>
+          </div>
+        </div>
+
+        <div class="tour-card fade-in">
+          <div class="tour-card-image">
+            <div class="tour-placeholder">&#127754;</div>
+          </div>
+          <div class="tour-card-body">
+            <h3 data-i18n="tours.zaisan.title">Озеро Зайсан (Мыс Шекельмес)</h3>
+            <p data-i18n="tours.zaisan.desc">Одно из красивейших озёр Казахстана с живописным мысом Шекельмес</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 data-i18n="cta.title">Готовы к незабываемому отдыху?</h2>
+      <p data-i18n="cta.subtitle">Забронируйте свой идеальный дом на Радуге уже сегодня</p>
+      <div class="cta-buttons">
+        <a href="javascript:void(0)" class="btn btn-whatsapp btn-lg" onclick="handleWhatsAppClick()">
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-i18n="cta.whatsapp">Написать в WhatsApp</span>
+        </a>
+        <a href="#questionnaire" class="btn btn-secondary btn-lg" data-i18n="cta.questionnaire">Заполнить заявку</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== QUESTIONNAIRE ==================== -->
+  <section class="section questionnaire" id="questionnaire">
+    <div class="container">
+      <h2 class="section-title" data-i18n="questionnaire.title">Оставить заявку</h2>
+      <div class="rainbow-divider"></div>
+      <p class="section-subtitle" style="margin-top: 24px;" data-i18n="questionnaire.subtitle">Заполните форму, и мы свяжемся с вами в WhatsApp</p>
+
+      <div class="questionnaire-form" id="questionnaireForm">
+        <!-- Progress -->
+        <div class="form-progress">
+          <div class="form-progress-step active" data-step="1"><span data-i18n="questionnaire.step">Шаг</span> 1</div>
+          <div class="form-progress-step" data-step="2"><span data-i18n="questionnaire.step">Шаг</span> 2</div>
+          <div class="form-progress-step" data-step="3"><span data-i18n="questionnaire.step">Шаг</span> 3</div>
+        </div>
+
+        <!-- Step 1: Contact Info -->
+        <div class="form-step active" data-step="1">
+          <h3 data-i18n="questionnaire.step1_title">Контактная информация</h3>
+          <div class="form-group">
+            <label for="q-name" data-i18n="questionnaire.name">Ваше имя</label>
+            <input type="text" class="form-control" id="q-name" data-i18n-placeholder="questionnaire.name" placeholder="Ваше имя">
+          </div>
+          <div class="form-group">
+            <label for="q-phone" data-i18n="questionnaire.phone">Телефон</label>
+            <input type="tel" class="form-control" id="q-phone" placeholder="+7 (___) ___-__-__">
+          </div>
+          <div class="form-nav">
+            <div></div>
+            <button class="btn btn-primary" onclick="nextStep(2)" data-i18n="questionnaire.next">Далее</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Stay Details -->
+        <div class="form-step" data-step="2">
+          <h3 data-i18n="questionnaire.step2_title">Детали проживания</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q-date-from" data-i18n="questionnaire.date_from">Дата заезда</label>
+              <input type="date" class="form-control" id="q-date-from">
+            </div>
+            <div class="form-group">
+              <label for="q-date-to" data-i18n="questionnaire.date_to">Дата выезда</label>
+              <input type="date" class="form-control" id="q-date-to">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label data-i18n="questionnaire.adults">Взрослые</label>
+              <div class="number-stepper">
+                <button class="stepper-btn" onclick="stepValue('q-adults', -1)">-</button>
+                <input type="number" class="stepper-value" id="q-adults" value="2" min="1" max="20" readonly>
+                <button class="stepper-btn" onclick="stepValue('q-adults', 1)">+</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label data-i18n="questionnaire.children">Дети</label>
+              <div class="number-stepper">
+                <button class="stepper-btn" onclick="stepValue('q-children', -1)">-</button>
+                <input type="number" class="stepper-value" id="q-children" value="0" min="0" max="20" readonly>
+                <button class="stepper-btn" onclick="stepValue('q-children', 1)">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-i18n="questionnaire.rooms">Количество домов</label>
+            <div class="number-stepper">
+              <button class="stepper-btn" onclick="stepValue('q-rooms', -1)">-</button>
+              <input type="number" class="stepper-value" id="q-rooms" value="1" min="1" max="10" readonly>
+              <button class="stepper-btn" onclick="stepValue('q-rooms', 1)">+</button>
+            </div>
+          </div>
+          <div class="form-nav">
+            <button class="btn btn-outline" onclick="prevStep(1)" data-i18n="questionnaire.prev">Назад</button>
+            <button class="btn btn-primary" onclick="nextStep(3)" data-i18n="questionnaire.next">Далее</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Room Type & Submit -->
+        <div class="form-step" data-step="3">
+          <h3 data-i18n="questionnaire.step3_title">Выбор дома</h3>
+          <div class="form-group">
+            <label data-i18n="questionnaire.room_type">Тип дома</label>
+            <div class="radio-options">
+              <div class="radio-option">
+                <input type="radio" name="room-type" id="rt-comfort" value="Комфорт">
+                <label for="rt-comfort" data-i18n="rooms.comfort.name">Комфорт</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" name="room-type" id="rt-comfortplus" value="Комфорт Плюс">
+                <label for="rt-comfortplus" data-i18n="rooms.comfortplus.name">Комфорт Плюс</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" name="room-type" id="rt-vip" value="VIP">
+                <label for="rt-vip">VIP</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" name="room-type" id="rt-undecided" value="undecided" checked>
+                <label for="rt-undecided" data-i18n="questionnaire.undecided">Ещё не решил(а)</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="q-special" data-i18n="questionnaire.special">Особые пожелания</label>
+            <textarea class="form-control" id="q-special" rows="3" data-i18n-placeholder="questionnaire.special_placeholder" placeholder="Напишите, если есть особые пожелания..."></textarea>
+          </div>
+          <div class="form-nav">
+            <button class="btn btn-outline" onclick="prevStep(2)" data-i18n="questionnaire.prev">Назад</button>
+            <button class="btn btn-whatsapp" onclick="submitQuestionnaire()">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span data-i18n="questionnaire.submit">Отправить заявку в WhatsApp</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CHARITY ==================== -->
+  <section class="section charity" id="charity">
+    <div class="container">
+      <h2 class="section-title" data-i18n="charity.title">Наши благотворительные проекты</h2>
+      <div class="rainbow-divider"></div>
+      <p class="section-subtitle" style="margin-top: 24px;" data-i18n="charity.subtitle">Мы не просто место для отдыха — мы вносим вклад в будущее</p>
+
+      <div class="charity-grid">
+        <div class="charity-card fade-in">
+          <div class="charity-card-image">
+            <img src="images/charity/charity1.jpg" alt="Благотворительность" loading="lazy">
+          </div>
+          <div class="charity-card-body">
+            <h3 data-i18n="charity.project1.title">Летний отдых для детей с ДЦП</h3>
+            <p data-i18n="charity.project1.desc">Бесплатный летний отдых для детей реабилитационного центра «Демей»</p>
+          </div>
+        </div>
+
+        <div class="charity-card fade-in">
+          <div class="charity-card-image">
+            <img src="images/charity/charity2.jpg" alt="Дорога в школу" loading="lazy">
+          </div>
+          <div class="charity-card-body">
+            <h3 data-i18n="charity.project2.title">«Дорога в школу»</h3>
+            <p data-i18n="charity.project2.desc">32 ученика Сарыбельской и Миролюбовской школ получили рюкзаки с полным комплектом канцелярских товаров</p>
+          </div>
+        </div>
+
+        <div class="charity-card fade-in">
+          <div class="charity-card-image">
+            <div class="charity-placeholder">&#127795;</div>
+          </div>
+          <div class="charity-card-body">
+            <h3 data-i18n="charity.project3.title">Озеленение</h3>
+            <p data-i18n="charity.project3.desc">Посажено 150 деревьев вишни и смородины, 120 саженцев ели, боярки, барбариса и сирени</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RULES (collapsible) ==================== -->
+  <section class="section" id="rules">
+    <div class="container">
+      <div class="rules-section fade-in">
+        <h2 class="section-title" style="text-align: left; font-size: 1.5rem;" data-i18n="rules.title">Правила проживания</h2>
+        <div class="rules-grid">
+          <div class="rule-item"><span>&#128340;</span> <span data-i18n="rules.checkin">Заезд с 14:00, выезд до 12:00</span></div>
+          <div class="rule-item"><span>&#128179;</span> <span data-i18n="rules.prepayment">Предоплата 100%, при заселении нужен документ</span></div>
+          <div class="rule-item"><span>&#128261;</span> <span data-i18n="rules.quiet">Режим тишины: 23:00 — 09:00</span></div>
+          <div class="rule-item"><span>&#128663;</span> <span data-i18n="rules.parking">Парковка за территорией, въезд только для разгрузки</span></div>
+        </div>
+        <div class="rules-toggle" onclick="toggleRules()">
+          <span data-i18n="rules.more">Подробные правила</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+        </div>
+        <div class="rules-full" id="rulesContent">
+          <p><strong>Заезд и проживание</strong></p>
+          <p>Заезд с 14:00, выезд до 12:00. Проживание по предварительной брони и предоплате 100%, при заселении нужен документ. Домики рассчитаны: Комфорт и Комфорт+ до 6 гостей, VIP дома – до 8 гостей. Дополнительные места возможны по согласованию (но не более 1 чел., с доплатой 5000 тг/чел.). Ранний заезд (с 08:00) и поздний выезд (до 18:00) оплачиваются отдельно — 50% от стоимости суток, по предварительному согласованию.</p>
+          <br>
+          <p><strong>Безопасность</strong></p>
+          <p>Курить разрешается только в специально отведённых местах. Пиротехника запрещена. Огонь разводим и жарим шашлыки строго в мангальных зонах. Купание и пребывание на пляже — под личную ответственность гостей, трезвыми и только в светлое время суток. Родители несут полную ответственность за безопасность детей.</p>
+          <br>
+          <p><strong>Тишина и уважение</strong></p>
+          <p>С 23:00 до 09:00 — режим тишины. Алкоголь разрешается только в личных зонах, без шума. На пляже и в детских зонах распитие запрещено. Агрессия и громкая музыка — повод для выселения.</p>
+          <br>
+          <p><strong>Парковка</strong></p>
+          <p>Въезд автомобилей на территорию только для разгрузки/погрузки, затем — на парковку.</p>
+          <br>
+          <p><strong>Кухня</strong></p>
+          <p>Питание самостоятельное — кухня оборудована всем необходимым. Шампура, решётки, пляжные полотенца — привозите с собой. Дрова можно приобрести на месте. Казаны — в аренду у администрации.</p>
+          <br>
+          <p><strong>Возвраты</strong></p>
+          <p>Возврат/перебронирование при предупреждении за 5 суток — без штрафных. За порчу имущества — возмещение ущерба. За грубые нарушения — выселение без возврата оплаты.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-section">
+          <h3 data-i18n="contact.title">Контакты</h3>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <a href="tel:+77767788007">+7 (776) 778-80-07</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <a href="https://wa.me/77713426072" target="_blank">+7 (771) 342-60-72</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span data-i18n="contact.address_value">Самарка, Восточно-Казахстанская область, Казахстан</span>
+          </div>
+        </div>
+
+        <div class="contact-section">
+          <h3 data-i18n="contact.follow_title">Мы в соцсетях</h3>
+          <div class="contact-social">
+            <a href="https://instagram.com/" target="_blank" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-section">
+          <h3 data-i18n="contact.quick_links">Быстрые ссылки</h3>
+          <div class="contact-item"><a href="#rooms" data-i18n="nav.rooms">Дома</a></div>
+          <div class="contact-item"><a href="#pricing" data-i18n="nav.pricing">Цены</a></div>
+          <div class="contact-item"><a href="#facilities" data-i18n="nav.facilities">Удобства</a></div>
+          <div class="contact-item"><a href="#questionnaire" data-i18n="questionnaire.title">Оставить заявку</a></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          <img src="images/logo.jpg" alt="Радуга">
+          <span data-i18n="footer.tagline">База отдыха «Радуга» — семейный отдых на берегу озера Сарыбель</span>
+        </div>
+        <span>&copy; 2026 Raduga. <span data-i18n="footer.rights">Все права защищены</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FLOATING WHATSAPP ==================== -->
+  <div class="whatsapp-float" id="whatsappFloat" onclick="handleWhatsAppClick()" title="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </div>
+
+  <!-- ==================== WHATSAPP PROMPT MODAL ==================== -->
+  <div class="wa-prompt-overlay" id="waPrompt">
+    <div class="wa-prompt">
+      <h3 data-i18n="whatsapp.prompt.title">Хотите заполнить анкету?</h3>
+      <p data-i18n="whatsapp.prompt.desc">Заполнив короткую анкету, вы поможете нам подготовить для вас лучшее предложение</p>
+      <div class="wa-prompt-buttons">
+        <a href="#questionnaire" class="btn btn-primary" onclick="closeWaPrompt()" data-i18n="whatsapp.prompt.fill">Заполнить анкету</a>
+        <button class="btn btn-outline" onclick="openWhatsAppDirect()" data-i18n="whatsapp.prompt.skip">Написать напрямую</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== LIGHTBOX ==================== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img src="" alt="" id="lightboxImg">
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
