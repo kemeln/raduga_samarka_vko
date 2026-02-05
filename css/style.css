@@ -1279,15 +1279,27 @@ button {
 .tour-card-image {
   height: 250px;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent));
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  background: var(--color-bg-warm);
 }
 
-.tour-card-image .tour-placeholder {
-  font-size: 4rem;
-  color: white;
+.tour-carousel {
+  position: absolute;
+  inset: 0;
+}
+
+.tour-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.tour-slide.active {
+  opacity: 1;
 }
 
 .tour-card-body {
