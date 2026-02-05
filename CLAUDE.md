@@ -20,6 +20,9 @@ i18n/               # Translation JSON files (ru, kz, en)
 content/images/     # Organized by category: hero/, comfort/, comfort-plus/, vip/, facilities/, charity/
 images/             # Logo and shared assets
 ```
+## Adding New Features or Fixing Bugs
+
+**IMPORTANT**: When you work on a new feature or bug, crate a git branch first. Then work on changes in that branch for the remainder of the session.
 
 ## Key Sections in index.html
 
@@ -75,7 +78,4 @@ When working on specific areas, consult:
 
 - [Architectural Patterns](.claude/docs/architectural_patterns.md) - Component patterns, modal system, form state machine, i18n architecture, and conventions used across the codebase
 
-## Adding New Features or Fixing Bugs
-
-**IMPORTANT**: When you work on a new feature or bug, crate a git branch first. Then work on changes in that branch for the remainder of the session.
 
