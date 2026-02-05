@@ -18,17 +18,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ==================== LANGUAGE SYSTEM ====================
 async function initLanguage() {
-  const savedLang = localStorage.getItem('raduga-lang') || 'ru';
+  let savedLang = 'ru';
+  try {
+    savedLang = localStorage.getItem('raduga-lang') || 'ru';
+  } catch (e) {
+    // localStorage unavailable (Safari private browsing, restricted context)
+  }
   const urlParams = new URLSearchParams(window.location.search);
   const urlLang = urlParams.get('lang');
   currentLang = urlLang || savedLang;
 
   // Load all translations
   try {
+    const toJson = r => {
+      if (!r.ok) throw new Error(`Failed to load ${r.url}: ${r.status}`);
+      return r.json();
+    };
     const [ru, kz, en] = await Promise.all([
-      fetch('i18n/ru.json').then(r => r.json()),
-      fetch('i18n/kz.json').then(r => r.json()),
-      fetch('i18n/en.json').then(r => r.json())
+      fetch('i18n/ru.json').then(toJson),
+      fetch('i18n/kz.json').then(toJson),
+      fetch('i18n/en.json').then(toJson)
     ]);
     translations = { ru, kz, en };
   } catch (e) {
@@ -41,7 +50,11 @@ async function initLanguage() {
 
 function setLanguage(lang) {
   currentLang = lang;
-  localStorage.setItem('raduga-lang', lang);
+  try {
+    localStorage.setItem('raduga-lang', lang);
+  } catch (e) {
+    // localStorage unavailable (Safari private browsing, quota exceeded)
+  }
   document.documentElement.lang = lang === 'kz' ? 'kk' : lang;
 
   // Update active button
@@ -53,7 +66,7 @@ function setLanguage(lang) {
   const t = translations[lang] || {};
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (t[key]) {
+    if (key in t) {
       el.textContent = t[key];
     }
   });
@@ -61,7 +74,7 @@ function setLanguage(lang) {
   // Apply placeholder translations
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const key = el.getAttribute('data-i18n-placeholder');
-    if (t[key]) {
+    if (key in t) {
       el.placeholder = t[key];
     }
   });
@@ -70,12 +83,15 @@ function setLanguage(lang) {
 // Language button click handlers
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('lang-btn')) {
-    setLanguage(e.target.dataset.lang);
+    const lang = e.target.dataset.lang;
+    if (!translations[lang]) return; // translations not loaded yet
+    setLanguage(lang);
   }
 });
 
 function t(key) {
-  return (translations[currentLang] && translations[currentLang][key]) || key;
+  const lang = translations[currentLang];
+  return (lang && key in lang) ? lang[key] : key;
 }
 
 // ==================== HERO CAROUSEL ====================
