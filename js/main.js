@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initIntersectionObserver();
   initDateValidation();
   initPhoneMask();
+  initSafetySlideshow();
 });
 
 // ==================== LANGUAGE SYSTEM ====================
@@ -561,6 +562,19 @@ document.addEventListener('click', (e) => {
     closeLightbox();
   }
 });
+
+// ==================== SAFETY SLIDESHOW ====================
+function initSafetySlideshow() {
+  const slides = document.querySelectorAll('.safety-hero-slide');
+  if (slides.length === 0) return;
+
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 4000);
+}
 
 // ==================== RULES TOGGLE ====================
 function toggleRules() {
