@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDateValidation();
   initPhoneMask();
   initSafetySlideshow();
+  initReviewsCarousel();
 });
 
 // ==================== LANGUAGE SYSTEM ====================
@@ -574,6 +575,31 @@ function initSafetySlideshow() {
     current = (current + 1) % slides.length;
     slides[current].classList.add('active');
   }, 4000);
+}
+
+// ==================== REVIEWS CAROUSEL ====================
+function initReviewsCarousel() {
+  const slides = document.querySelectorAll('.review-slide');
+  const indicators = document.querySelectorAll('.reviews-indicator');
+  if (slides.length === 0) return;
+
+  let current = 0;
+
+  function showReview(index) {
+    slides[current].classList.remove('active');
+    indicators[current].classList.remove('active');
+    current = index;
+    slides[current].classList.add('active');
+    indicators[current].classList.add('active');
+  }
+
+  indicators.forEach(btn => {
+    btn.addEventListener('click', () => showReview(parseInt(btn.dataset.index)));
+  });
+
+  setInterval(() => {
+    showReview((current + 1) % slides.length);
+  }, 6000);
 }
 
 // ==================== RULES TOGGLE ====================
