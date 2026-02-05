@@ -1919,7 +1919,7 @@ textarea.form-control {
     top: var(--header-height);
     left: 0;
     right: 0;
-    bottom: 0;
+    height: calc(100vh - var(--header-height));
     background: white;
     flex-direction: column;
     padding: 24px;
