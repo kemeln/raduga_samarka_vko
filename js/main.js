@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollEffects();
   initMobileMenu();
   initIntersectionObserver();
+  initDateValidation();
+  initPhoneMask();
 });
 
 // ==================== LANGUAGE SYSTEM ====================
@@ -252,13 +254,149 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// ==================== DATE VALIDATION ====================
+function initDateValidation() {
+  const dateFrom = document.getElementById('q-date-from');
+  const dateTo = document.getElementById('q-date-to');
+
+  // Set min to today for check-in
+  const today = new Date().toISOString().split('T')[0];
+  dateFrom.min = today;
+  dateTo.min = today;
+
+  dateFrom.addEventListener('change', () => {
+    if (dateFrom.value) {
+      // Checkout must be at least the day after check-in
+      const nextDay = new Date(dateFrom.value);
+      nextDay.setDate(nextDay.getDate() + 1);
+      const minCheckout = nextDay.toISOString().split('T')[0];
+      dateTo.min = minCheckout;
+
+      // If current checkout is invalid, clear it
+      if (dateTo.value && dateTo.value <= dateFrom.value) {
+        dateTo.value = '';
+      }
+    } else {
+      dateTo.min = today;
+    }
+  });
+}
+
+// ==================== PHONE MASK ====================
+function initPhoneMask() {
+  const phoneInput = document.getElementById('q-phone');
+  phoneInput.setAttribute('inputmode', 'numeric');
+  phoneInput.value = '';
+  phoneInput.placeholder = '+7 (___) ___-__-__';
+
+  // Track the 10-digit local number (after +7) as source of truth
+  let rawDigits = '';
+
+  function updateDisplay() {
+    phoneInput.value = formatPhone(rawDigits);
+    const len = phoneInput.value.length;
+    phoneInput.setSelectionRange(len, len);
+  }
+
+  phoneInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Backspace' || e.key === 'Delete') {
+      e.preventDefault();
+      if (phoneInput.selectionStart !== phoneInput.selectionEnd) {
+        rawDigits = '';
+      } else if (rawDigits.length > 0) {
+        rawDigits = rawDigits.slice(0, -1);
+      }
+      updateDisplay();
+      return;
+    }
+
+    // Allow navigation and system shortcuts
+    if (['Tab', 'Escape', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End'].includes(e.key)) return;
+    if ((e.ctrlKey || e.metaKey) && ['a', 'c', 'v', 'x'].includes(e.key.toLowerCase())) return;
+
+    if (/^\d$/.test(e.key)) {
+      e.preventDefault();
+      if (phoneInput.selectionStart !== phoneInput.selectionEnd) {
+        rawDigits = '';
+      }
+      if (rawDigits.length < 10) {
+        rawDigits += e.key;
+        updateDisplay();
+      }
+    } else if (e.key.length === 1 && !e.ctrlKey && !e.metaKey) {
+      // Block non-digit printable characters
+      e.preventDefault();
+    }
+    // Let unrecognized keys (e.g. mobile 'Unidentified') through to input event
+  });
+
+  phoneInput.addEventListener('paste', (e) => {
+    e.preventDefault();
+    const paste = (e.clipboardData || window.clipboardData).getData('text');
+    let digits = paste.replace(/\D/g, '');
+
+    // Strip +7 or 8 prefix from pasted full numbers
+    if (digits.length > 10 && (digits[0] === '7' || digits[0] === '8')) {
+      digits = digits.substring(1);
+    }
+
+    if (phoneInput.selectionStart !== phoneInput.selectionEnd) {
+      rawDigits = digits.substring(0, 10);
+    } else {
+      rawDigits = (rawDigits + digits).substring(0, 10);
+    }
+    updateDisplay();
+  });
+
+  // Fallback for mobile keyboards and autofill (fires when keydown didn't preventDefault)
+  phoneInput.addEventListener('input', () => {
+    let digits = phoneInput.value.replace(/\D/g, '');
+
+    // Our formatting always prepends +7, so strip leading '7' from the prefix
+    if (digits.startsWith('7') && digits.length > 1) {
+      digits = digits.substring(1);
+    }
+
+    // Handle full numbers with country code
+    if (digits.length > 10 && (digits[0] === '7' || digits[0] === '8')) {
+      digits = digits.substring(1);
+    }
+
+    digits = digits.substring(0, 10);
+    rawDigits = digits;
+    updateDisplay();
+  });
+
+  // Re-sync if field was cleared externally
+  phoneInput.addEventListener('focus', () => {
+    if (!phoneInput.value) {
+      rawDigits = '';
+    }
+  });
+}
+
+function formatPhone(digits) {
+  if (digits.length === 0) return '';
+  if (digits.length <= 3) {
+    return '+7 (' + digits;
+  }
+  if (digits.length <= 6) {
+    return '+7 (' + digits.substring(0, 3) + ') ' + digits.substring(3);
+  }
+  if (digits.length <= 8) {
+    return '+7 (' + digits.substring(0, 3) + ') ' + digits.substring(3, 6) + '-' + digits.substring(6);
+  }
+  return '+7 (' + digits.substring(0, 3) + ') ' + digits.substring(3, 6) + '-' + digits.substring(6, 8) + '-' + digits.substring(8, 10);
+}
+
 // ==================== QUESTIONNAIRE ====================
 function nextStep(step) {
   // Validate current step
   if (step === 2) {
     const name = document.getElementById('q-name').value.trim();
     const phone = document.getElementById('q-phone').value.trim();
-    if (!name || !phone) {
+    const phoneDigits = phone.replace(/\D/g, '');
+    if (!name || phoneDigits.length < 11) {
       alert(currentLang === 'en' ? 'Please fill in your name and phone number' :
             currentLang === 'kz' ? 'Атыңызды және телефон нөміріңізді толтырыңыз' :
             'Пожалуйста, заполните имя и телефон');
@@ -306,7 +444,8 @@ function submitQuestionnaire() {
   const roomType = document.querySelector('input[name="room-type"]:checked');
   const special = document.getElementById('q-special').value.trim();
 
-  if (!name || !phone) {
+  const phoneDigits = phone.replace(/\D/g, '');
+  if (!name || phoneDigits.length < 11) {
     showStep(1);
     alert(currentLang === 'en' ? 'Please fill in your name and phone number' :
           currentLang === 'kz' ? 'Атыңызды және телефон нөміріңізді толтырыңыз' :
