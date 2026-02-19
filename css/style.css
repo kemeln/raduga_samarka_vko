@@ -752,14 +752,15 @@ button {
 
 .modal-header {
   position: relative;
-  height: 300px;
+  max-height: 500px;
   overflow: hidden;
+  background: #1a1a1a;
 }
 
 .modal-header img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-height: 500px;
+  object-fit: contain;
 }
 
 .modal-close {
@@ -2042,7 +2043,11 @@ textarea.form-control {
   }
 
   .modal-header {
-    height: 200px;
+    max-height: 300px;
+  }
+
+  .modal-header img {
+    max-height: 300px;
   }
 
   .modal-actions {
