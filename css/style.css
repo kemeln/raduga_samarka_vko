@@ -327,6 +327,8 @@ button {
   height: auto;
   margin: 0 auto 20px;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+  mix-blend-mode: multiply;
+  border-radius: var(--radius-md);
 }
 
 .hero-title {
@@ -1259,7 +1261,7 @@ button {
 
 .tours-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
@@ -1889,6 +1891,10 @@ textarea.form-control {
   }
 
   .facilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tours-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
